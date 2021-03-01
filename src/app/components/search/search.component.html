@@ -1,0 +1,13 @@
+<h1 class="animated fadeIn">Busca tu artista favorito</h1>
+<div class="row animated fadeIn">
+    <div class="col">
+        <input type="text" #termino (keyup)="buscar(termino)" class="form-control" placeholder="Buscar artista">
+    </div>
+</div>
+<!-- <img src="../../assets/img/noimage.png" alt=""> -->
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+
+<app-tarjetas [items]="artistasSearch" *ngIf="!loading">
+
+
+</app-tarjetas>
